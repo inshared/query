@@ -8,6 +8,21 @@ importers:
 
   .:
     devDependencies:
+      '@angular/common':
+        specifier: ^17.0.2
+        version: 17.0.2(@angular/core@17.0.2)(rxjs@7.8.1)
+      '@angular/compiler':
+        specifier: ^17.0.2
+        version: 17.0.2(@angular/core@17.0.2)
+      '@angular/core':
+        specifier: ^17.0.2
+        version: 17.0.2(rxjs@7.8.1)(zone.js@0.14.2)
+      '@angular/language-service':
+        specifier: ^17.0.2
+        version: 17.0.2
+      '@angular/platform-browser':
+        specifier: ^17.0.2
+        version: 17.0.2(@angular/animations@17.0.2)(@angular/common@17.0.2)(@angular/core@17.0.2)
       '@commitlint/parse':
         specifier: ^17.6.5
         version: 17.6.5
@@ -199,10 +214,10 @@ importers:
         version: 17.0.2(@angular/animations@17.0.2)(@angular/common@17.0.2)(@angular/core@17.0.2)
       '@tanstack/angular-query-devtools-experimental':
         specifier: ^5.4.3
-        version: link:../../../packages/angular-query-devtools-experimental
+        version: link:../../../packages/angular-query-devtools-experimental/build
       '@tanstack/angular-query-experimental':
         specifier: ^5.4.3
-        version: link:../../../packages/angular-query-experimental
+        version: link:../../../packages/angular-query-experimental/build
       axios:
         specifier: ^1.4.0
         version: 1.5.1
@@ -239,10 +254,10 @@ importers:
         version: 17.0.2(@angular/animations@17.0.2)(@angular/common@17.0.2)(@angular/core@17.0.2)
       '@tanstack/angular-query-devtools-experimental':
         specifier: ^5.4.3
-        version: link:../../../packages/angular-query-devtools-experimental
+        version: link:../../../packages/angular-query-devtools-experimental/build
       '@tanstack/angular-query-experimental':
         specifier: ^5.4.3
-        version: link:../../../packages/angular-query-experimental
+        version: link:../../../packages/angular-query-experimental/build
       axios:
         specifier: ^1.4.0
         version: 1.5.1
@@ -276,10 +291,10 @@ importers:
         version: 17.0.2(@angular/animations@17.0.2)(@angular/common@17.0.2)(@angular/core@17.0.2)
       '@tanstack/angular-query-devtools-experimental':
         specifier: ^5.4.3
-        version: link:../../../packages/angular-query-devtools-experimental
+        version: link:../../../packages/angular-query-devtools-experimental/build
       '@tanstack/angular-query-experimental':
         specifier: ^5.4.3
-        version: link:../../../packages/angular-query-experimental
+        version: link:../../../packages/angular-query-experimental/build
       rxjs:
         specifier: ^7.4.0
         version: 7.8.1
@@ -1524,10 +1539,10 @@ importers:
         version: 17.0.2(@angular/common@17.0.2)(@angular/core@17.0.2)(@angular/platform-browser@17.0.2)(rxjs@7.8.1)
       '@tanstack/angular-query-devtools-experimental':
         specifier: workspace:*
-        version: link:../../packages/angular-query-devtools-experimental
+        version: link:../../packages/angular-query-devtools-experimental/build
       '@tanstack/angular-query-experimental':
         specifier: workspace:*
-        version: link:../../packages/angular-query-experimental
+        version: link:../../packages/angular-query-experimental/build
       rxjs:
         specifier: ~7.8.0
         version: 7.8.1
@@ -1567,10 +1582,10 @@ importers:
         version: 17.0.2(@angular/animations@17.0.2)(@angular/common@17.0.2)(@angular/core@17.0.2)
       '@tanstack/angular-query-devtools-experimental':
         specifier: workspace:*
-        version: link:../../packages/angular-query-devtools-experimental
+        version: link:../../packages/angular-query-devtools-experimental/build
       '@tanstack/angular-query-experimental':
         specifier: workspace:*
-        version: link:../../packages/angular-query-experimental
+        version: link:../../packages/angular-query-experimental/build
       rxjs:
         specifier: ^7.4.0
         version: 7.8.1
@@ -1756,7 +1771,7 @@ importers:
         version: 17.0.2(@angular/common@17.0.2)(@angular/compiler@17.0.2)(@angular/core@17.0.2)(@angular/platform-browser@17.0.2)
       '@tanstack/angular-query-experimental':
         specifier: workspace:*
-        version: link:../angular-query-experimental
+        version: link:../angular-query-experimental/build
       ng-packagr:
         specifier: ^17.0.0
         version: 17.0.0(@angular/compiler-cli@17.0.2)(tslib@2.6.2)(typescript@5.2.2)
@@ -1769,6 +1784,18 @@ importers:
       zone.js:
         specifier: ^0.14.2
         version: 0.14.2
+
+  packages/angular-query-devtools-experimental/build:
+    dependencies:
+      '@angular/core':
+        specifier: ^17
+        version: 17.0.2(rxjs@7.8.1)(zone.js@0.14.2)
+      '@tanstack/query-devtools':
+        specifier: workspace:*
+        version: link:../../query-devtools
+      tslib:
+        specifier: ^2.6.2
+        version: 2.6.2
 
   packages/angular-query-experimental:
     dependencies:
@@ -1821,6 +1848,21 @@ importers:
       zone.js:
         specifier: ^0.14.2
         version: 0.14.2
+
+  packages/angular-query-experimental/build:
+    dependencies:
+      '@angular/core':
+        specifier: ^17
+        version: 17.0.2(rxjs@7.8.1)(zone.js@0.14.2)
+      '@tanstack/query-core':
+        specifier: workspace:*
+        version: link:../../query-core
+      ngxtension:
+        specifier: ^1.0.3
+        version: 1.1.1(@angular/common@17.0.2)(@angular/core@17.0.2)(@use-gesture/vanilla@10.3.0)(rxjs@7.8.1)
+      tslib:
+        specifier: ^2.6.2
+        version: 2.6.2
 
   packages/codemods:
     devDependencies:
@@ -2608,7 +2650,6 @@ packages:
   /@angular/language-service@17.0.2:
     resolution: {integrity: sha512-A1roy4uqnPSUQ5IE/zOHSOj128u1b+cuzQkLtwTTjb5m0Y32GOhQeZgIQAt4mtuGnts27sgIFo1OQzK7J4DnIw==}
     engines: {node: ^18.13.0 || >=20.9.0}
-    dev: false
 
   /@angular/platform-browser-dynamic@17.0.2(@angular/common@17.0.2)(@angular/compiler@17.0.2)(@angular/core@17.0.2)(@angular/platform-browser@17.0.2):
     resolution: {integrity: sha512-clcHqHcfD00/TlTixDbJ3q4EQxpm0t2ZFG76rRFmGrmE5tKYUPfaofIa3hQCxy3q269MAYuF16wALhUtrEWyUA==}
