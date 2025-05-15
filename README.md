@@ -1,3 +1,11 @@
+## 🚨 Deprecated Repository
+
+This repository has been **archived** because the solution developed here has been **incorporated into the original project** it was forked from.
+
+Please refer to the upstream repository for the latest updates and ongoing development: [TanStack Query](https://github.com/TanStack/query) 
+
+---
+
 <img referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=be2d8a11-9712-4c1d-9963-580b2d4fb133" />
 
 ![TanStack Query Header](https://github.com/TanStack/query/raw/main/media/repo-header.png)
